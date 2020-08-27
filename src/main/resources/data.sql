@@ -1,0 +1,10 @@
+insert into author values (1, 'David Foster Wallace');
+insert into author values (2, 'Jonathan Franzen');
+insert into author values (3, 'James Baldwin');
+insert into author values (4, 'Toni Morrison');
+insert into author values (5, 'Margaret Atwood');
+insert into author values (6, 'Haruki Murakami');
+insert into author values (7, 'Virginia Woolf');
+insert into author values (8, 'Gabriel Garcia Marquez');
+insert into author values (9, 'Franz Kafka');
+insert into author values (10, 'Albert Camus');
