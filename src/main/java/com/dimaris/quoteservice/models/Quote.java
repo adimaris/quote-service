@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Quote {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String description;
