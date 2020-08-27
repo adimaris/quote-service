@@ -17,6 +17,14 @@ public class Quote {
     @JsonIgnore
     private Author author;
 
+    protected Quote() {}
+
+    public Quote(Integer id, String description) {
+        super();
+        this.id = id;
+        this.description = description;
+    }
+
     public Integer getId() {
         return id;
     }
