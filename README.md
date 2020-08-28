@@ -8,7 +8,7 @@ A REST API created using Spring Boot that allows the user to access quotes mappe
 # Command
 The REST API supports commands to:
 - GET all authors using /quoteservice/v1/authors
-- GET author by id using /quoteservice/v1/authors{id}
+- GET author by id using /quoteservice/v1/authors/{id}
 - POST an author using /quoteservice/v1/authors
 - GET all quotes by an author using their author id at /quoteservice/v1/authors/{id}/quotes
 - POST a new quote to a specific author /quoteservice/v1/authors/{id}/quotes
