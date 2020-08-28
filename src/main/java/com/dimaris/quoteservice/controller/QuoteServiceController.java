@@ -49,7 +49,7 @@ public class QuoteServiceController {
     }
 
     @PostMapping("/authors")
-    public ResponseEntity<Object> createUser(@RequestBody Author author) {
+    public ResponseEntity<Object> createAuthor(@RequestBody Author author) {
         Author savedAuthor = authorRepository.save(author);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
@@ -70,7 +70,7 @@ public class QuoteServiceController {
     }
 
     @PostMapping("/authors/{id}/quotes")
-    public ResponseEntity<Object> createPost(@PathVariable int id, @RequestBody Quote quote) {
+    public ResponseEntity<Object> createQuote(@PathVariable int id, @RequestBody Quote quote) {
 
         Optional<Author> authorOptional = authorRepository.findById(id);
 
@@ -89,7 +89,7 @@ public class QuoteServiceController {
     }
 
     @DeleteMapping("/authors/{id}/quotes/{quoteId}")
-    public void deleteUser(@PathVariable int id, @PathVariable int quoteId) {
+    public void deleteQuote(@PathVariable int id, @PathVariable int quoteId) {
         Optional<Author> author = authorRepository.findById(id);
 
         if (!author.isPresent()) {
