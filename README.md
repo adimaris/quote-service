@@ -2,17 +2,17 @@
 A REST API created using Spring Boot that allows the user to access quotes mapped to famous auhtors.
 
 # Access
-- The REST API is hosted on an AWS EC2 instance and can be accessed at [this link](http://ec2-3-131-169-83.us-east-2.compute.amazonaws.com:8080/quoteservice/v1/authors/). 
-- Access the Swagger documentation at [this link](http://ec2-3-131-169-83.us-east-2.compute.amazonaws.com:8080/swagger-ui/#).
+- The REST API is deployed using AWS Elastic Bean Stalk. All authors can be retrieved at [this endpoint](http://quoteservice-env.eba-th4anqyj.us-east-2.elasticbeanstalk.com/quoteservice/v1/authors). 
+- The Swagger documentation is available at [this link](http://quoteservice-env.eba-th4anqyj.us-east-2.elasticbeanstalk.com/swagger-ui/#).
 
 # Command
 The REST API supports commands to:
-- GET all authors
-- GET author by id
-- POST an author
-- GET all quotes by an author
-- POST a new quote to a specific author
-- DELTE a quote mapped to a specific author
+- GET all authors using /quoteservice/v1/authors
+- GET author by id using /quoteservice/v1/authors{id}
+- POST an author using /quoteservice/v1/authors
+- GET all quotes by an author using their author id at /quoteservice/v1/authors/{id}/quotes
+- POST a new quote to a specific author /quoteservice/v1/authors/{id}/quotes
+- DELETE a quote mapped to a specific author /quoteservice/v1/authors/{id}/quotes/{quoteId}
 
 # Default Quotes
 The API is seeded with quotes from:
