@@ -5,7 +5,7 @@ A REST API created using Spring Boot that allows the user to access quotes mappe
 - The REST API is deployed using AWS Elastic Bean Stalk. All authors can be retrieved at [this endpoint](http://quoteservice-env.eba-th4anqyj.us-east-2.elasticbeanstalk.com/quoteservice/v1/authors). 
 - The Swagger documentation is available at [this link](http://quoteservice-env.eba-th4anqyj.us-east-2.elasticbeanstalk.com/swagger-ui/#).
 
-# Command
+# Commands
 The REST API supports commands to:
 - GET all authors using /quoteservice/v1/authors
 - GET author by id using /quoteservice/v1/authors/{id}
