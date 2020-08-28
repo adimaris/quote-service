@@ -38,7 +38,7 @@ public class QuoteServiceController {
     public EntityModel<Author> retrieveAuthorById(@PathVariable int id) {
         Optional<Author> author = authorRepository.findById(id);
 
-        if (author == null) {
+        if (!author.isPresent()) {
             throw new AuthorNotFoundException("id = " + id);
         }
 
@@ -62,7 +62,7 @@ public class QuoteServiceController {
     public List<Quote> retrieveAuthorQuotes(@PathVariable int id) {
         Optional<Author> author = authorRepository.findById(id);
 
-        if (author == null) {
+        if (!author.isPresent()) {
             throw new AuthorNotFoundException("id = " + id);
         }
 
@@ -92,7 +92,7 @@ public class QuoteServiceController {
     public void deleteUser(@PathVariable int id, @PathVariable int quoteId) {
         Optional<Author> author = authorRepository.findById(id);
 
-        if (author == null) {
+        if (!author.isPresent()) {
             throw new AuthorNotFoundException("id = " + id);
         }
 
