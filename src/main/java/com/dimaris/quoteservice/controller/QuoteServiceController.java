@@ -58,11 +58,6 @@ public class QuoteServiceController {
         return ResponseEntity.created(location).build();
     }
 
-    @DeleteMapping("/authors/{id}")
-    public void deleteUser(@PathVariable int id) {
-        authorRepository.deleteById(id);
-    }
-
     @GetMapping("/authors/{id}/quotes")
     public List<Quote> retrieveAuthorQuotes(@PathVariable int id) {
         Optional<Author> author = authorRepository.findById(id);

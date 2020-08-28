@@ -18,10 +18,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 public class SwaggerConfig {
 
     public static final Contact DEFAULT_CONTACT = new Contact(
-            "Alexander Dimaris", "adimaris.com", "alexander.dimaris@gmail.com");
+            "Alexander Dimaris", "dimaris.com", "alexander.dimaris@gmail.com");
 
     public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
-            "Quote Service API", "API that maps quotes to famous authors", "1.0",
+            "Quote Service", "Quote Service API that matches authors to quotes", "1.0",
             "urn:tos", DEFAULT_CONTACT,
             "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0", Arrays.asList());
 

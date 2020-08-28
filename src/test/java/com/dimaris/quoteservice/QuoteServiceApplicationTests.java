@@ -50,21 +50,6 @@ class QuoteServiceApplicationTests {
     }
 
     @Test
-    public void testDeletePost() {
-
-        int id = 1;
-        Author author = restTemplate.getForObject(getRootUrl() + "/authors/" + id, Author.class);
-        Assert.assertNotNull(author);
-        restTemplate.delete(getRootUrl() + "/authors/" + id);
-
-        try {
-            author = restTemplate.getForObject(getRootUrl() + "/authors/" + id, Author.class);
-        } catch (final HttpClientErrorException e) {
-            Assert.assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
-        }
-    }
-
-    @Test
     public void testGetAllQuotesByAuthor() {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
